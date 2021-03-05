@@ -8,12 +8,12 @@ export function Home(props) {
 			<div>
 				<i class="fas fa-clock"></i>
 			</div>
-			<div className="sixthDigit">{props.sixthOne}</div>
-			<div className="fifthDigit">{props.fifthhOne}</div>
-			<div className="fourthDigit">{props.fourthOne}</div>
-			<div className="thirdDigit">{props.thirdOne}</div>
-			<div className="secondDigit">{props.secondOne}</div>
-			<div className="firstDigit">{props.firstOne}</div>
+			<div className="sixthDigit">{props.sixthOne % 10}</div>
+			<div className="fifthDigit">{props.fifthhOne % 10}</div>
+			<div className="fourthDigit">{props.fourthOne % 10}</div>
+			<div className="thirdDigit">{props.thirdOne % 10}</div>
+			<div className="secondDigit">{props.secondOne % 10}</div>
+			<div className="firstDigit">{props.firstOne % 10}</div>
 		</div>
 	);
 }
@@ -25,3 +25,13 @@ Home.propType = {
 	secondOne: PropTypes.number,
 	firstOne: PropTypes.number
 };
+let counter = 0;
+setInterval(function() {
+	let sixth = Math.floor(counter / 100000);
+	let fifth = Math.floor(counter / 10000);
+	let fourth = Math.floor(counter / 1000);
+	let third = Math.floor(counter / 100);
+	let second = Math.floor(counter / 10);
+	let first = Math.floor(counter / 1);
+	couter++;
+}, 1000);
