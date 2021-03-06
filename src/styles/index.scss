@@ -17,7 +17,12 @@
     padding: 15px;
     border-radius: 10px;
 }
-
+i{
+    color:blue;
+}
+.container div:first-child{
+    background-color: chartreuse;
+}
 /* 
 
     You can write your own styles here...
